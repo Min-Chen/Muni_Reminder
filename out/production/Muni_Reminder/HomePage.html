@@ -1,0 +1,116 @@
+<html>
+<body>
+    <form name="input" action="http://localhost:8080/submit" method="get">
+        Route:
+    <select name='route' id='routes'>
+        <option value='BUS'>BUS-Muni Metro Bus Shuttle</option>
+        <option value='E'>E-Embarcadero</option>
+        <option value='F'>F-Market & Wharves</option>
+        <option value='J'>J-Church</option>
+        <option value='KT'>KT-Ingleside/Third Street</option>
+        <option value='L'>L-Taraval</option>
+        <option value='M'>M-Ocean View</option>
+        <option value='N'>N-Judah</option>
+        <option value='NX'>NX-Express</option>
+        <option value='1'>1-California</option>
+        <option value='1AX'>1AX-California A Express</option>
+        <option value='1BX'>1BX-California B Express</option>
+        <option value='2'>2-Clement</option>
+        <option value='3'>3-Jackson</option>
+        <option value='5'>5-Fulton</option>
+        <option value='5R'>5R-Fulton Rapid</option>
+        <option value='6'>6-Haight-Parnassus</option>
+        <option value='7'>7-Haight-Noriega</option>
+        <option value='7R'>7R-Haight-Noriega Rapid</option>
+        <option value='7X'>7X-Noriega Express</option>
+        <option value='8'>8-Bayshore</option>
+        <option value='8AX'>8AX-Bayshore A Express</option>
+        <option value='8BX'>8BX-Bayshore B Express</option>
+        <option value='9'>9-San Bruno</option>
+        <option value='9R'>9R-San Bruno Rapid</option>
+        <option value='10'>10-Townsend</option>
+        <option value='12'>12-Folsom-Pacific</option>
+        <option value='14'>14-Mission</option>
+        <option value='14R'>14R-Mission Rapid</option>
+        <option value='14X'>14X-Mission Express</option>
+        <option value='18'>18-46th Avenue</option>
+        <option value='19'>19-Polk</option>
+        <option value='21'>21-Hayes</option>
+        <option value='22'>22-Fillmore</option>
+        <option value='23'>23-Monterey</option>
+        <option value='24'>24-Divisadero</option>
+        <option value='25'>25-Treasure Island</option>
+        <option value='27'>27-Bryant</option>
+        <option value='28'>28-19th Avenue</option>
+        <option value='28R'>28R-19th Avenue Rapid</option>
+        <option value='29'>29-Sunset</option>
+        <option value='30'>30-Stockton</option>
+        <option value='30X'>30X-Marina Express</option>
+        <option value='31'>31-Balboa</option>
+        <option value='31AX'>31AX-Balboa A Express</option>
+        <option value='31BX'>31BX-Balboa B Express</option>
+        <option value='33'>33-Ashbury-18th</option>
+        <option value='35'>35-Eureka</option>
+        <option value='36'>36-Teresita</option>
+        <option value='37'>37-Corbett</option>
+        <option value='38'>38-Geary</option>
+        <option selected='selected' value='38R'>38R-Geary Rapid</option>
+        <option value='38AX'>38AX-Geary A Express</option>
+        <option value='38BX'>38BX-Geary B Express</option>
+        <option value='39'>39-Coit Tower</option>
+        <option value='41'>41-Union</option>
+        <option value='43'>43-Masonic</option>
+        <option value='44'>44-O'Shaughnessy</option>
+        <option value='45'>45-Union-Stockton</option>
+        <option value='47'>47-Van Ness</option>
+        <option value='48'>48-24th Street</option>
+        <option value='49'>49-Van Ness-Mission</option>
+        <option value='52'>52-Excelsior</option>
+        <option value='54'>54-Felton</option>
+        <option value='55'>55-16th Street</option>
+        <option value='56'>56-Rutland</option>
+        <option value='57'>57-Parkmerced</option>
+        <option value='66'>66-Quintara</option>
+        <option value='67'>67-Bernal Heights</option>
+        <option value='76X'>76X-Marin Headlands Express</option>
+        <option value='81X'>81X-Caltrain Express</option>
+        <option value='82X'>82X-Levi Plaza Express</option>
+        <option value='83X'>83X-Mid-Market Express</option>
+        <option value='88'>88-Bart Shuttle</option>
+        <option value='90'>90-San Bruno Owl</option>
+        <option value='91'>91-Owl</option>
+        <option value='K_OWL'>K-Owl</option>
+        <option value='L_OWL'>L-Owl</option>
+        <option value='M_OWL'>M-Owl</option>
+        <option value='N_OWL'>N-Owl</option>
+        <option value='T_OWL'>T-Owl</option>
+        <option value='59'>Powell/Mason Cable Car</option>
+        <option value='60'>Powell/Hyde Cable Car</option>
+        <option value='61'>California Cable Car</option>
+    </select>
+
+
+    Direction:
+    <select name="direction", id="directions">
+        <option selected='selected' value='38R__I_F00'>Inbound to Transbay Terminal</option>
+        <option value='38R__O_F00'>Outbound to 48th Avenue</option>
+    </select>
+
+
+    Stop No:
+    <input type="text" name="stopnumber"/>
+
+    Want to get on the last bus before:
+    <input type="text" name="oclock"/> o'clock
+
+    Minutes to go:
+    <input type="text" name="mintogo"/>
+
+
+    <input type="submit" value="Submit"/>
+
+    </form>
+
+</body>
+</html>
+
