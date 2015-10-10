@@ -11,6 +11,7 @@ import java.text.ParseException;
  * Created by artemischen on 10/10/15.
  */
 public class TransitAPI {
+    Stops stops = new Stops();
     private static String secretToken;
     private static String HOST;
     private static String[] services = {
@@ -83,7 +84,7 @@ public class TransitAPI {
      * @param route
      * @return
      */
-    public static String getStops(String route) {
+    public static String getStops(String route, String direction) {
         String agenciesResponse = "";
         try {
             HTTPRequest httpRequest = new HTTPRequest(HOST + services[3]);
@@ -121,55 +122,18 @@ public class TransitAPI {
         }
         return agenciesResponse;
     }
+
+    /**
+     * Get XML of SF-MUNI list of stops for each route.
+     * @param route
+     * @param direction
+     * @param stops
+     * @return
+     */
+    public static String getMuniStops(String route, String direction, String stops) {
+        return null;
+    }
+
 }
 
 
-    for route in get_departures(stop_id):
-    name = route.get("Name")
-    direction = route[0][0].get("Name")
-    times = muni_times(route)
-
-    # store the route info at MUNI stop
-    routes[name] = (direction, times)
-
-            return routes
-
-
-    def muni_stop(name):
-            """ Normalize SF-MUNI stop name with regex. """
-    name = re.sub("  and  ", " & ", name)
-    name = re.sub("Street", "St", name)
-    name = re.sub(" Of ", " of ", name)
-    name = re.sub("C Chavez", "Cesar Chavez", name)
-            return name
-
-
-    def muni_stops(route_id, direction, stops):
-            """ Get XML of SF-MUNI list of stops for each route. """
-            for stop in get_stops(route_id, direction):
-    stop_id = stop.get("StopCode")
-
-            # store each stop in dictionary
-    stops[stop_id] = muni_stop(stop.get("name"))
-
-            return stops
-
-
-    def muni_routes(agency, stops):
-            """ Get XML of SF-MUNI stops from all the routes for specific agency. """
-            for route in get_routes(agency):
-    route_id = route.get("Code")
-
-            # grab inbound stops
-            stops = muni_stops(route_id, direction[0], stops)
-
-    # grab outbound stops, except 81X and 80X don't have outbound stops
-            if route_id != "81X" and route_id != "80X":
-    stops = muni_stops(route_id, direction[1], stops)
-
-    return stops
-
-
-    def muni():
-            """ Get SF-MUNI data on stops for all of the routes. """
-            return muni_routes(agency[5], {})
