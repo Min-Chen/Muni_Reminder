@@ -1,5 +1,25 @@
+<!DOCTYPE html>
 <html>
+    
+<header>
+    <p>BUS ROUTE</p>
+    </header>
+   
+    
+    
+    
+<link rel="stylesheet" href="design.css">
+    
+<image>
+    <img src="bus.jpg" alt="bus" style="width:350px;height:228px;"></image>
+
+
+    
+     
+     
 <body>
+
+<p> 
     <form name="input" action="http://localhost:8080/submit" method="get">
         Route:
     <select name='route' id='routes'>
@@ -88,29 +108,49 @@
         <option value='60'>Powell/Hyde Cable Car</option>
         <option value='61'>California Cable Car</option>
     </select>
+    </p>
+   
 
-
+<p>
     Direction:
+        <script type= "text/javascript">
+            var name="direction"
+            if (name == "38-Geary"){
+            }
+ </script>      
     <select name="direction", id="directions">
         <option selected='selected' value='38R__I_F00'>Inbound to Transbay Terminal</option>
         <option value='38R__O_F00'>Outbound to 48th Avenue</option>
     </select>
+    
+    
+    
+        </p>
+    
 
-
-    Stop No:
-    <input type="text" name="stopnumber"/>
+    
+<p>
 
     Want to get on the last bus before:
-    <input type="text" name="oclock"/> o'clock
+    <input type="number" value="hour"/> : <input type="number" value="minute"/>
 
-    Minutes to go:
+</p>
+
+<p>
+    Stop No:
+    <input type="text" name="stopnumber"/>
+    </p>        
+    
+    <p>
+        Minutes to go:
     <input type="text" name="mintogo"/>
+    </p>
 
 
     <input type="submit" value="Submit"/>
 
     </form>
-
+    
+    
 </body>
 </html>
-
