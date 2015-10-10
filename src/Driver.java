@@ -49,7 +49,7 @@ public class Driver {
         try {
             url = "https://www.nextbus.com/#!/sf-muni/31/31___I_F00/3066/3064";
             System.out.println(url);
-            HtmlRequest htmlRequest = new HtmlRequest(url);
+            HTTPRequest htmlRequest = new HTTPRequest(url);
             urlSource = htmlRequest.getURLSource(htmlRequest.url);
             System.out.println(urlSource);
 

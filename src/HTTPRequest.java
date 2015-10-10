@@ -4,28 +4,28 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class HtmlRequest {
+public class HTTPRequest {
     /** *//**
      * @param args
      * @throws MalformedURLException
      */
     public URL url;
 
-    public HtmlRequest(String urlString) throws MalformedURLException{
+    public HTTPRequest(String urlString) throws MalformedURLException{
         url = new URL(urlString);
     }
 
     /** *//**
      * 通过网站域名URL获取该网站的源码 
-     * @param url
+     * @param
      * @return String
      * @throws Exception
      */
 
     //String urlSource = getURLSource(url);
-    public static String getURLSource(URL url) throws Exception    {
+    public String getURLSource() throws Exception    {
 
-        HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+        HttpURLConnection conn = (HttpURLConnection) this.url.openConnection();
         conn.setRequestMethod("GET");
         conn.setConnectTimeout(5 * 1000);
         InputStream inStream =  conn.getInputStream();  //通过输入流获取html二进制数据  
